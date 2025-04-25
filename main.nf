@@ -12,7 +12,7 @@ process task {
         val cmd
 
     output:
-        path 'output/*'  // Declare everything in the output directory as output
+        path 'output'  // Declare everything in the output directory as output
 
     container 'nextflow/bash'
 
