@@ -12,17 +12,24 @@ process task {
     container 'nextflow/bash'
 
     output:
-        path 'output/*'
+        path 'output'
 
     script:
     """
     $cmd
     """
+
 }
 
 workflow {
 
     // emit a greeting
     task(params.cmd)
+    taskout = task.out
 }
 
+output {
+    taskout {
+        path '.'
+    }
+}
