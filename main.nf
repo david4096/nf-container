@@ -25,7 +25,7 @@ workflow {
     task(params.cmd)
 
     publish:
-    outputs = fetch.out
+    outputs = task.out
 }
 
 output {
