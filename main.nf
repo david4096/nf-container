@@ -12,7 +12,7 @@ process task {
     container 'nextflow/bash'
 
     output:
-        path 'output'
+        path 'output/*'
 
     script:
     """
