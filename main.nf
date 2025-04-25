@@ -27,9 +27,3 @@ workflow {
     task(params.cmd)
     taskout = task.out
 }
-
-output {
-    taskout {
-        path '.'
-    }
-}
