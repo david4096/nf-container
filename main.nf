@@ -11,6 +11,9 @@ process task {
 
     container 'nextflow/bash'
 
+    output:
+        path 'output'
+
     script:
     """
     $cmd
