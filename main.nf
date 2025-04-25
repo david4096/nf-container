@@ -7,12 +7,9 @@ process task {
     publishDir 'output', mode: 'copy'
 
     input:
-            val greeting
+            val cmd
 
     container 'nextflow/bash'
-
-    output:
-        path 'output.txt'
 
     script:
     """
