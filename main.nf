@@ -6,8 +6,6 @@ nextflow.enable.dsl=2
 params.cmd = params.cmd ?: 'mkdir -p output && echo Hello > output/output.txt'
 
 process task {
-    publishDir 'output', mode: 'copy'  // This publishes the contents of 'output/'
-
     input:
         val cmd
 
