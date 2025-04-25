@@ -4,8 +4,6 @@
  * Use echo to print 'Hello World!' to a file
  */
 process task {
-    publishDir 'output', mode: 'copy'
-
     input:
             val cmd
 
@@ -25,5 +23,14 @@ workflow {
 
     // emit a greeting
     task(params.cmd)
-    taskout = task.out
+
+    publish:
+    outputs = fetch.out
 }
+
+output {
+    outputs {
+        path '.'
+    }
+}
+
