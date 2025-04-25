@@ -13,7 +13,7 @@ process task {
 
     script:
     """
-    cmd
+    $cmd
     """
 }
 
